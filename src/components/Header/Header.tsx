@@ -1,31 +1,53 @@
-import sty from "./Header.module.scss"
+import { useEffect, useState, FC } from "react"
+import "./Header.scss"
 
 export function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleScroll = () => {
+    setIsScrolled(window.scrollY > 0);
+  }
+  
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header>
-      <div>
-        <img className={sty.logoImage1} src="/logo-transparent-v1.png" width={228}></img>
-        <img className={sty.logoImage2} src="/logo-transparent-v2.png" width={228}></img>
+    <>
+      <header>
+        <div className="header-content">
+          <Logo isScrolled={isScrolled} />
+          <nav className="header-nav">
+            <ul>
+              <li className="nav-active-page">Home</li>
+              <li>Serviços</li>
+              <li>Contato</li>
+              <li>Intranet</li>
+              <li className="nav-button">
+                <a>Área do Condômino</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div className={`header-background ${isScrolled ? 'show-background' : ''}`}></div>
+      </header>
+    </>
+  )
+}
+
+type LogoProps = { isScrolled: boolean }
+const Logo: FC<LogoProps> = ({ isScrolled }) => {
+  const logoClassList = isScrolled ? 'logo-page-scrolled' : ''
+
+  return (
+    <>
+      <div className={`logo-div ${logoClassList}`}>
+        <img className="nav-logo logo-after" src="/logo-transparent-v1.png" width={228}></img>
+        <img className="nav-logo logo-before" src="/logo-transparent-v2.png" width={228}></img>
       </div>
-      <nav className={sty.headerNavigator}>
-        <ul>
-          <li>
-            <span>Home</span>
-          </li>
-          <li>
-            <span>Serviços</span>
-          </li>
-          <li>
-            <span>Contato</span>
-          </li>
-          <li>
-            <span>Intranet</span>
-          </li>
-          <li className={sty.areaDoCondomino}>
-            <span>Área do Condômino</span>
-          </li>
-        </ul>
-      </nav>
-    </header>
+    </>
   )
 }
