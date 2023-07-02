@@ -15,16 +15,31 @@ header {
 
   .header-nav {
     ul {
-      display: grid;
-      grid-auto-flow: column;
-      grid-column-gap: 1.5rem;
+      display: flex;
+      gap: 1.5rem;
       list-style-type: none;
-      margin-top: 1.5rem;
+      margin-top: 1rem;
+      align-items: center;
       li {
-        font-family: 'AlegreyaSans';
         font-weight: 500;
         letter-spacing: 0.06em;
+        position: relative;
       }
+      .nav-button {
+        div{
+          background: rgba(39, 168, 242, 0.90);
+          padding: 0.375em 0.75em;
+          border-radius: 1.3em;
+        }
+      }
+
+        a {
+          text-decoration: none;
+          color: white;
+          &:visited {
+            color: white;
+          }
+        }
   
       .nav-active-page {
         display: flex;
@@ -38,6 +53,8 @@ header {
           height: 2px;
           background-color: #fff;
           border-radius: 2px;
+          position: absolute;
+          bottom: -.5rem;
         }
       }
     }
@@ -83,7 +100,7 @@ header {
     width: 100%;
     height: 70%;
     border-bottom: 1px solid rgba(171, 171, 171, 0.3);
-    background: linear-gradient(180deg, rgba(9, 37, 53, 0.49) 0%, rgba(0, 0, 0, 0.00) 100%);
+    background: linear-gradient(180deg, rgba(0, 48, 77, 0.49) 0%, rgba(0, 105, 175, 0.452) 100%);
     backdrop-filter: blur(11.5px);
     -webkit-background-clip: padding-box;
     background-clip: padding-box;
