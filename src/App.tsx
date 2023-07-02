@@ -1,7 +1,8 @@
 import './App.scss'
 import { Header } from './components/Header/Header'
-import { SecondSection } from './components/SecondSection/SecondSection'
 import { FirstSection } from './components/firstSection/FirstSection'
+import { SecondSection } from './components/SecondSection/SecondSection'
+import { ThirdSection } from './components/ThirdSection/ThirdSection'
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <FirstSection />
       <SecondSection />
+      <ThirdSection />
     </>
   )
 }

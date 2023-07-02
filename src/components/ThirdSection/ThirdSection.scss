@@ -1,0 +1,7 @@
+@use "../../styles/base";
+
+.sec-03 {
+  display: flex;
+  flex-direction: column;
+  background-color: base.$light-blue;
+}
