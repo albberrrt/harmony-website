@@ -32,9 +32,7 @@ export function Header() {
               <li>Contato</li>
               <li><a href="https://br126.hostgator.com.br:2096/webmaillogout.cgi">Intranet</a></li>
               <li className="nav-button">
-                <div>
-                  <a href="https://admrsr.superlogica.net/clients/areadocondomino">Área do Condômino</a>
-                </div>
+                <a href="https://admrsr.superlogica.net/clients/areadocondomino">Área do Condômino</a>
               </li>
             </ul>
           </nav>
