@@ -7,13 +7,13 @@ export function ThirdSection() {
     <section className="sec sec-03">
       <div className="sec-03-content">
         <div className="title">
-          <img alt="check" src={checkIcon} width={50}></img>
+          <img alt="check" src={checkIcon} width={60}></img>
           <h3>Soluções para a administração<br></br><span>do seu condomínio</span></h3>
         </div>
         <div className="info">
           <p>Além de auxiliarmos o síndico, nossa equipe esta focada na busca de resultados
           para a vida condominial.</p>
-          <h5>Investimos em tecnologia para prestarmos serviços com qualidade.</h5>
+          <p>Investimos em tecnologia para prestarmos serviços com qualidade.</p>
         </div>
         <div className="button">
           <a>Conheça nossos serviços</a>
