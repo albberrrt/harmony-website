@@ -5,7 +5,7 @@ export function SecondSection() {
   return (
     <section className="sec sec-02">
       <div className="title">
-        <h3>Toda tranquilidade do seu condomínio <br></br>nas <span>palmas da sua mão.</span></h3>
+        <h3>Toda tranquilidade do seu condomínio <br></br>na <span>palma da sua mão.</span></h3>
       </div>
       <div className="sec-02-container">
           <img alt="Woman at blue phone" src={assetUrl} width={450}></img>
