@@ -19,7 +19,7 @@ export function ThirdSection() {
           <a>Conheça nossos serviços</a>
         </div>
       </div>
-      <img className="sec-02-img" alt="Man Working with Superlogica" src={manImage}></img>
+      <img className="sec-03-img" alt="Man Working with Superlogica" src={manImage}></img>
     </section>
   )
 }
